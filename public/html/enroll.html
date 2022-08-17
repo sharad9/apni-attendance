@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apni Attendance</title>
+  <script src="../script/face-api.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="../assets/DOVE.png">
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pnotify/3.2.1/pnotify.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/pnotify/3.2.1/pnotify.brighttheme.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../style/style.css">
+
+</head>
+
+<body style="margin:5px;">
+  <header>
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand"><b>Apni Attendance</b></a>
+          <button type="button" class="btn btn-danger btn-xs" onclick="javascript:GoogleLogin()"
+            id="status">Login</button>
+
+          <i class="fa fa-refresh fa-spin fa-2x" id="spinner" style="display:none;padding-left:5px;padding-right:5px;color:
+           rgb(255, 0, 93)"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <hr>
+  <hr>
+  </nav>
+  <div class="thumbnail">
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <center>
+
+            <video onloadedmetadata=" onPlay(this)" id="inputVideo" autoplay muted playsinline width="40%">
+            </video>
+          </center>
+        </div>
+      </div>
+
+      <div class="panel-footer clearfix">
+        <div class="btn-group-horizontal">
+          <center>
+            <ul style="list-style: none;">
+              <li>
+
+                <i class="fa fa-meh-o" style="font-size:44px;" id="emotion-neutral"></i>
+                <i class="fa fa-smile-o" style="font-size:44px;" id="emotion-happy"></i>
+
+              </li>
+
+            </ul>
+          </center>
+
+          <center>
+
+            <a type="button" class="btn btn-success btn-lg"
+              onclick="javascript:location.href='./index.html'"><b>Home</b></a>
+            <a type="button" class="btn btn-success btn-lg" onclick="javascript:startEnrollment()"><b>Start
+                Enrollment</b></a>
+          </center>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="caption">
+      <h3>Live Location and Face Recognition Based Attendance</h4>
+         <a type="button" data-toggle="collapse" data-target="#myCollapsible"
+           class="btn btn-default btn-xs btn-block"><b>Read More</b></a>
+       
+         <!-- Collapsible Element HTML -->
+          <div id="myCollapsible" class="panel-collapse collapse">
+            <pre>
+          A GPS tracking unit,
+           geotracking unit, satellite tracking unit, or simply tracker is a navigation device
+          normally on a vehicle, asset, person or animal that uses satellite navigation to determine its movement and
+          determine its WGS84 UTM geographic position (geotracking) to determine its location.[1] Satellite tracking
+          devices send special satellite signals that are processed by a receiver.
+
+          Locations are stored in the tracking unit or transmitted to an Internet-connected device using the cellular
+          network (GSM/GPRS/CDMA/LTE or SMS), radio, or satellite modem embedded in the unit or WiFi work worldwide.
+
+          GPS antenna size limits tracker size, often smaller than a half-dollar (diameter 30.61 mm). In 2020 tracking
+          is a $2 billion business plus military-in the gulf war 10% or more targets used trackers. Virtually every
+          cellphone tracks its movements. Tracks can be map displayed in real time, using GPS tracking software and
+          devices with GPS capability.[2]
+
+          Face Recognition AI Based
+
+             A facial recognition system is a technology capable of matching a human face from a digital image or a
+             video frame against a database of faces, typically employed to authenticate users through ID verification
+             services, works by pinpointing and measuring facial features from a given image.[1]
+
+             Development began on similar systems in the 1960s, beginning as a form of computer application. Since their
+             inception, facial recognition systems have seen wider uses in recent times on smartphones and in other
+             forms of technology, such as robotics. Because computerized facial recognition involves the measurement of
+             a human's physiological characteristics, facial recognition systems are categorized as biometrics. Although
+             the accuracy of facial recognition systems as a biometric technology is lower than iris recognition and
+             fingerprint recognition, it is widely adopted due to its contactless process.[2] Facial recognition systems
+             have been deployed in advanced human–computer interaction, video surveillance and automatic indexing of
+             images.[3]
+
+             Facial recognition systems are employed throughout the world today by governments and private companies.[4]
+             Their effectiveness varies, and some systems have previously been scrapped because of their
+             ineffectiveness. The use of facial recognition systems has also raised controversy, with claims that the
+             systems violate citizens' privacy, commonly make incorrect identifications, encourage gender norms and
+             racial profiling, and do not protect important biometric data. The appearance of synthetic media such as
+             deepfakes has also raised concerns about its security.[5] These claims have led to the ban of facial
+             recognition systems in several cities in the United States.[6] As a result of growing societal concerns,
+             Meta announced[7] that it plans to shut down Facebook facial recognition system, deleting the face scan
+             data of more than one billion users.[8] This change will represent one of the largest shifts in facial
+             recognition usage in the technology's history.</pre>
+          </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script type="module" src="../script/enroll.js"></script>
+  <script type="module" src="../script/login.js"></script>
+
+</body>
+
+</html>

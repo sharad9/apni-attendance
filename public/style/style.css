@@ -1,0 +1,25 @@
+
+::-webkit-scrollbar {
+  width: 0px;
+  
+}
+
+
+
+
+#emotion-neutral.fulfilled {
+  color: grey;
+}
+
+#emotion-happy.fulfilled {
+  color: green;
+}
+
+#emotion-surprised.fulfilled {
+  color: yellow;
+}
+
+#emotion-angry.fulfilled {
+  color: red;
+}
+  
